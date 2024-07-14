@@ -1,0 +1,14 @@
+services:
+  app:
+    build: .
+    ports:
+      - '3000:3000'
+    environment:
+      PORT: ${PORT}
+    develop:
+      watch:
+        - action: sync
+          path: ./src
+          target: /usr/app/src
+          ignore:
+            - node_modules/
