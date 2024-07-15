@@ -6,7 +6,7 @@ const fastify = Fastify({
 
 const { PORT = '3000' } = process.env
 
-fastify.get('/', async (request, reply) => {
+fastify.get('/', async () => {
   return { message: 'Hellooooo node!' }
 })
 
